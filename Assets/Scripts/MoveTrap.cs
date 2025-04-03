@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class MovingTrap : MonoBehaviour
+public class MoveTrap : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 28f;
-    [SerializeField] private float moveForce = 4f;
+    public enum MoveDirection { Left, Right, Up, Down } // Dropdown for direction
+
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private MoveDirection direction; // Dropdown for movement direction
+    [SerializeField] private float moveDistance = 4f; // How far it moves
 
     private Vector2 startPosition;
     private Vector2 targetPosition;
@@ -12,13 +15,7 @@ public class MovingTrap : MonoBehaviour
     private void Start()
     {
         startPosition = transform.position;
-        targetPosition = new Vector2(startPosition.x + moveForce, startPosition.y); 
-
-        ProximityDetector detector = FindAnyObjectByType<ProximityDetector>();
-        if (detector != null)
-        {
-            detector.OnPlayerStepped += StartMoving;
-        }
+        targetPosition = startPosition + GetDirectionVector() * moveDistance;
     }
 
     private void Update()
@@ -29,8 +26,20 @@ public class MovingTrap : MonoBehaviour
         }
     }
 
-    private void StartMoving()
+    public void StartMoving()
     {
         isMoving = true;
+    }
+
+    private Vector2 GetDirectionVector()
+    {
+        switch (direction)
+        {
+            case MoveDirection.Left: return Vector2.left;
+            case MoveDirection.Right: return Vector2.right;
+            case MoveDirection.Up: return Vector2.up;
+            case MoveDirection.Down: return Vector2.down;
+            default: return Vector2.zero;
+        }
     }
 }

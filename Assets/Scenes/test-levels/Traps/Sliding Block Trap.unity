@@ -267,7 +267,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 27.5
-  moveForce: 4
+  direction: 1
+  moveDistance: 4
 --- !u!1 &1644359473
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,6 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1997218583}
+  targetTrap: {fileID: 100879228}
 --- !u!61 &1861468248
 BoxCollider2D:
   m_ObjectHideFlags: 0
