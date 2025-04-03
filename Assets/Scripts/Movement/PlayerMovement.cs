@@ -1,16 +1,18 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 8f;
-    [SerializeField] private float jumpStrength = 16f;    
-    [SerializeField] private float jumpCutMultiplier = 0.5f; 
-    [SerializeField] private Transform groundCheck;     
-    [SerializeField] private LayerMask groundLayer;   
+    [SerializeField] private float jumpStrength = 16f;
+    [SerializeField] private float jumpCutMultiplier = 0.5f;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
 
     private Rigidbody2D rb;
-    private float moveInput;
+    private float moveInput = 0f;
     private bool facingRight = true;
+    private bool isJumping = false;
 
     void Start()
     {
@@ -19,8 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        HandleMovementInput();
-        HandleJumpInput();
         FlipCharacter();
     }
 
@@ -29,23 +29,37 @@ public class PlayerMovement : MonoBehaviour
         ApplyMovement();
     }
 
-    private void HandleMovementInput()
+    public void MoveLeft()
     {
-        moveInput = Input.GetAxisRaw("Horizontal"); 
+        moveInput = -1f;
     }
 
-
-    private void HandleJumpInput()
+    public void MoveRight()
     {
-        if (Input.GetButtonDown("Jump") && IsGrounded())
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength); 
-        }
+        moveInput = 1f;
+    }
 
-        if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
+    public void StopMovement()
+    {
+        moveInput = 0f;
+    }
+
+    public void JumpPress()
+    {
+        if (IsGrounded())
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier); // Cut jump force
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength);
+            isJumping = true;
         }
+    }
+
+    public void JumpRelease()
+    {
+        if (isJumping && rb.linearVelocity.y > 0)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
+        }
+        isJumping = false;
     }
 
     private void ApplyMovement()
@@ -57,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
+
     private void FlipCharacter()
     {
         if (facingRight && moveInput < 0f || !facingRight && moveInput > 0f)

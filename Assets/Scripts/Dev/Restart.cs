@@ -1,18 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Restart : MonoBehaviour
 {
-    public void RestartLevel()
+    public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            RestartLevel();
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reloads the current scene
     }
 }
