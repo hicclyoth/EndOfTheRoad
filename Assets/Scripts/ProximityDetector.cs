@@ -1,20 +1,18 @@
+using System;
 using UnityEngine;
 
 public class ProximityDetector : MonoBehaviour
 {
-    public delegate void PlayerNearby();
-    public event PlayerNearby OnPlayerDetected;
-
+    public delegate void PlayerStepped();
+    public event PlayerStepped OnPlayerStepped;
     [SerializeField] private Transform player;
-    [SerializeField] private float activationDistance = 5f;
 
-    private void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-
-        if (distanceToPlayer < activationDistance)
+        if (other.transform == player)
         {
-            OnPlayerDetected?.Invoke(); 
+            OnPlayerStepped?.Invoke();
+            Debug.Log("Stepped!");
         }
     }
 }

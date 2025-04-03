@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class MoveTrap : MonoBehaviour
+public class MovingTrap : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float moveSpeed = 28f;
     [SerializeField] private float moveForce = 4f;
 
     private Vector2 startPosition;
@@ -14,10 +14,10 @@ public class MoveTrap : MonoBehaviour
         startPosition = transform.position;
         targetPosition = new Vector2(startPosition.x + moveForce, startPosition.y); 
 
-        ProximityDetector detector = GetComponent<ProximityDetector>();
+        ProximityDetector detector = FindAnyObjectByType<ProximityDetector>();
         if (detector != null)
         {
-            detector.OnPlayerDetected += StartMoving;
+            detector.OnPlayerStepped += StartMoving;
         }
     }
 
