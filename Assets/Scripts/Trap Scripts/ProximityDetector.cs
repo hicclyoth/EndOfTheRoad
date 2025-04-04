@@ -1,15 +1,16 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ProximityDetector : MonoBehaviour
 {
-    [SerializeField] private Transform player; // Assign the player manually
-    [SerializeField] private MoveTrap targetTrap; // Assign the specific trap to trigger
+    [SerializeField] private Transform player; // The player GameObject
+    [SerializeField] private UnityEvent onPlayerEnter; // Unity Event to trigger custom actions
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.transform == player) // Only detect the assigned player
+        if (other.transform == player)
         {
-            targetTrap.StartMoving(); // Directly call StartMoving() on the assigned trap
+            onPlayerEnter.Invoke(); // Trigger the assigned UnityEvent
         }
     }
 }
