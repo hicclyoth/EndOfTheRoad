@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class MoveTrap : MonoBehaviour
 {
-    public enum MoveDirection { Left, Right, Up, Down } // Dropdown for direction
+    public enum MoveDirection { Left, Right, Up, Down }
 
     [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private MoveDirection direction; // Dropdown for movement direction
-    [SerializeField] private float moveDistance = 4f; // How far it moves
-    [SerializeField] private float pushForce = 5f; // Force to apply on collision with player
+    [SerializeField] private MoveDirection direction;
+    [SerializeField] private float moveDistance = 4f;
+    [SerializeField] private float pushForce = 5f;
 
     private Vector2 startPosition;
     private Vector2 targetPosition;
@@ -15,23 +15,34 @@ public class MoveTrap : MonoBehaviour
 
     private void Start()
     {
-        startPosition = transform.position;
-        targetPosition = startPosition + GetDirectionVector() * moveDistance;
+        startPosition = transform.position; // Set initial position at the start
     }
 
     private void Update()
     {
+        // If the trap is moving, update its position
         if (isMoving)
         {
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
+            // Stop moving once the target position is reached
+            if ((Vector2)transform.position == targetPosition)
+            {
+                isMoving = false;
+            }
         }
     }
 
+    // This method will be called when the trap should start moving
     public void StartMoving()
     {
+        // Calculate the target position based on the current position and movement direction
+        targetPosition = (Vector2)transform.position + GetDirectionVector() * moveDistance;
+
         isMoving = true;
     }
 
+    // This method gives the direction vector based on the movement direction
     private Vector2 GetDirectionVector()
     {
         switch (direction)
@@ -44,7 +55,7 @@ public class MoveTrap : MonoBehaviour
         }
     }
 
-    // This method will be called when the trap collides with another object.
+    // This method is called when the trap collides with the player
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -52,11 +63,10 @@ public class MoveTrap : MonoBehaviour
             Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
             if (playerRb != null)
             {
-                // Push the player in the opposite direction of the trap's movement.
+                // Push the player away from the trap
                 Vector2 pushDirection = (collision.transform.position - transform.position).normalized;
                 playerRb.AddForce(pushDirection * pushForce, ForceMode2D.Impulse);
             }
         }
     }
 }
-

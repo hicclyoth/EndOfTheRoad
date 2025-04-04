@@ -4,7 +4,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"C:/Users/Clyoth/Unity/EndOfTheRoad/Build;C:/Users/Clyoth/Unity/End of the Road/Build;;;;;;;;\"}"
+                "value": "{\"m_Value\":\"C:/Users/Clyoth/Unity/GameServer;C:/Users/Clyoth/Unity/EndOfTheRoad/Build;C:/Users/Clyoth/Unity/End of the Road/Build;;;;;;;\"}"
             }
         ]
     }
