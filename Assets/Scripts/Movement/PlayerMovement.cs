@@ -1,18 +1,20 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 8f;
-    [SerializeField] private float jumpStrength = 16f;
-    [SerializeField] private float jumpCutMultiplier = 0.5f;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
+    public float moveSpeed = 5f;
+    public float jumpForce = 10f;
+
+    public TouchButton leftButton;
+    public TouchButton rightButton;
+    public TouchButton jumpButton;
+
+    public Transform groundCheck;
+    public float groundRadius = 0.2f;
+    public LayerMask groundLayer;
 
     private Rigidbody2D rb;
-    private float moveInput = 0f;
-    private bool facingRight = true;
-    private bool isJumping = false;
+    private bool jumpUsed = false;
 
     void Start()
     {
@@ -21,65 +23,44 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        FlipCharacter();
+        HandleMovement();
+        HandleJump();
     }
 
-    void FixedUpdate()
+    void HandleMovement()
     {
-        ApplyMovement();
+        float move = 0f;
+
+        if (leftButton != null && leftButton.IsPressed)
+            move = -1f;
+        else if (rightButton != null && rightButton.IsPressed)
+            move = 1f;
+
+        rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
     }
 
-    public void MoveLeft()
+    void HandleJump()
     {
-        moveInput = -1f;
-    }
+        bool isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
 
-    public void MoveRight()
-    {
-        moveInput = 1f;
-    }
-
-    public void StopMovement()
-    {
-        moveInput = 0f;
-    }
-
-    public void JumpPress()
-    {
-        if (IsGrounded())
+        if (jumpButton != null && jumpButton.IsPressed && isGrounded && !jumpUsed)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength);
-            isJumping = true;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            jumpUsed = true;
+        }
+
+        if (!jumpButton.IsPressed && isGrounded)
+        {
+            jumpUsed = false;
         }
     }
 
-    public void JumpRelease()
+    void OnDrawGizmosSelected()
     {
-        if (isJumping && rb.linearVelocity.y > 0)
+        if (groundCheck != null)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
-        }
-        isJumping = false;
-    }
-
-    private void ApplyMovement()
-    {
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-    }
-
-    private bool IsGrounded()
-    {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    }
-
-    private void FlipCharacter()
-    {
-        if (facingRight && moveInput < 0f || !facingRight && moveInput > 0f)
-        {
-            facingRight = !facingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
         }
     }
 }
