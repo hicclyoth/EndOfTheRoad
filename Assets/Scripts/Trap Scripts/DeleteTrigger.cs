@@ -1,14 +1,22 @@
 using UnityEngine;
 
-public class DeleteTrigger : MonoBehaviour
+public class DeleteTrigger : MonoBehaviour, IResettable
 {
+    private void Start()
+    {
+        LevelResetManager.Instance.Register(this);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the object entering the trigger is the player (or any specific object)
         if (other.CompareTag("Player"))
         {
-            // Destroy the trigger immediately
-            Destroy(gameObject);
+            gameObject.SetActive(false); 
         }
+    }
+
+    public void ResetState()
+    {
+        gameObject.SetActive(true); 
     }
 }

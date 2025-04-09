@@ -1,24 +1,22 @@
 using UnityEngine;
 
-public class PlayerRespawn : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    private static Vector3 checkpointPosition;
-    private Rigidbody2D rb;
+    private Vector2 lastCheckpointPosition;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        checkpointPosition = transform.position; // default spawn
+        lastCheckpointPosition = transform.position;
     }
 
-    public static void SetCheckpoint(Vector3 newPos)
+    public void SetCheckpoint(Vector2 checkpointPosition)
     {
-        checkpointPosition = newPos;
+        lastCheckpointPosition = checkpointPosition;
     }
 
-    public void Respawn()
+    public void RespawnPlayer()
     {
-        rb.linearVelocity = Vector2.zero;
-        transform.position = checkpointPosition;
+        transform.position = lastCheckpointPosition;
     }
+
 }
