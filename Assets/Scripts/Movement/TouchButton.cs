@@ -18,6 +18,8 @@ public class TouchButton : MonoBehaviour
 
         foreach (Touch touch in Input.touches)
         {
+
+            //Getting the coordinates of the touch
             Vector2 localPoint;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 rectTransform,
@@ -25,7 +27,7 @@ public class TouchButton : MonoBehaviour
                 null,
                 out localPoint
             );
-
+            //Checking if the touch was inside the rectTransform(Button)
             if (rectTransform.rect.Contains(localPoint))
             {
                 IsPressed = true;

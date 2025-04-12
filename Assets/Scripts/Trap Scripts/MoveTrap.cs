@@ -15,7 +15,7 @@ public class MoveTrap : MonoBehaviour, IResettable
 
     private void Start()
     {
-        // Register this trap with the LevelResetManager to allow reset functionality
+        // Register this trap with the LRM to allow reset functionality
         startPosition = transform.position;
         LevelResetManager.Instance.Register(this);
     }
