@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MoveTrap : MonoBehaviour
+public class MoveTrap : MonoBehaviour, IResettable
 {
     public enum MoveDirection { Left, Right, Up, Down }
 
@@ -15,17 +15,19 @@ public class MoveTrap : MonoBehaviour
 
     private void Start()
     {
-        startPosition = transform.position; // Set initial position at the start
+        // Register this trap with the LRM to allow reset functionality
+        startPosition = transform.position;
+        LevelResetManager.Instance.Register(this);
     }
 
     private void Update()
     {
-        // If the trap is moving, update its position
+        // If the trap is moving, update its position towards the target position
         if (isMoving)
         {
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
-            // Stop moving once the target position is reached
+            // Stop moving when the trap reaches the target position
             if ((Vector2)transform.position == targetPosition)
             {
                 isMoving = false;
@@ -33,16 +35,14 @@ public class MoveTrap : MonoBehaviour
         }
     }
 
-    // This method will be called when the trap should start moving
+    // Starts the movement of the trap to its target position
     public void StartMoving()
     {
-        // Calculate the target position based on the current position and movement direction
         targetPosition = (Vector2)transform.position + GetDirectionVector() * moveDistance;
-
         isMoving = true;
     }
 
-    // This method gives the direction vector based on the movement direction
+    // Get the direction for movement
     private Vector2 GetDirectionVector()
     {
         switch (direction)
@@ -55,7 +55,7 @@ public class MoveTrap : MonoBehaviour
         }
     }
 
-    // This method is called when the trap collides with the player
+    // When a player collides with the trap, push the player away
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -63,10 +63,16 @@ public class MoveTrap : MonoBehaviour
             Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
             if (playerRb != null)
             {
-                // Push the player away from the trap
                 Vector2 pushDirection = (collision.transform.position - transform.position).normalized;
                 playerRb.AddForce(pushDirection * pushForce, ForceMode2D.Impulse);
             }
         }
+    }
+
+    // This method will be called when the game is reset
+    public void ResetState()
+    {
+        transform.position = startPosition; // Reset trap position
+        isMoving = false; // Stop the trap from moving
     }
 }

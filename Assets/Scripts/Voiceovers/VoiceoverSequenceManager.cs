@@ -5,37 +5,37 @@ using UnityEngine.Events;
 public class VoiceoverSequenceManager : MonoBehaviour
 {
     [Header("Voiceover Settings")]
-    public AudioClip[] voiceoverClips;
-    public float minVoiceoverDuration = 20f;  
+    public AudioClip[] voiceoverClips;  // Array of voiceover clips to play
+    public float minVoiceoverDuration = 20f;  // Minimum duration for each voiceover
 
     [Header("Post Voiceover Actions")]
-    public UnityEvent onVoiceoversComplete; 
-    public UnityAction onVoiceoverFinished;
+    public UnityEvent onVoiceoversComplete;  // Event triggered when all voiceovers are complete
+    public UnityAction onVoiceoverFinished;  // Action triggered after each voiceover finishes
 
-    private AudioSource audioSource;
+    private AudioSource audioSource;  // AudioSource component to play the voiceovers
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();  // Get the AudioSource component
     }
 
-
+    // Start the voiceover sequence
     public void PlayVoiceovers()
     {
-        StartCoroutine(PlayVoiceoversSequence());
+        StartCoroutine(PlayVoiceoversSequence());  // Begin playing the voiceovers
     }
 
     private IEnumerator PlayVoiceoversSequence()
     {
-        foreach (AudioClip clip in voiceoverClips)
+        foreach (AudioClip clip in voiceoverClips)  // Loop through each voiceover clip
         {
-            audioSource.clip = clip;
-            audioSource.Play();
-            yield return new WaitForSeconds(Mathf.Max(minVoiceoverDuration, clip.length));
+            audioSource.clip = clip;  // Set the audio clip
+            audioSource.Play();  // Play the audio clip
+            yield return new WaitForSeconds(Mathf.Max(minVoiceoverDuration, clip.length));  // Wait for the clip to finish (or minimum duration)
 
-            onVoiceoverFinished?.Invoke();
+            onVoiceoverFinished?.Invoke();  // Trigger action after each voiceover finishes
         }
 
-        onVoiceoversComplete?.Invoke();
+        onVoiceoversComplete?.Invoke();  // Trigger event after all voiceovers are complete
     }
 }
