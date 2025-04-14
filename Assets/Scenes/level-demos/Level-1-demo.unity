@@ -8600,7 +8600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1098905515623074983, guid: fc815b34818c81845ae2aa7a9a66869f, type: 3}
       propertyPath: moveSpeed
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1098905515623074983, guid: fc815b34818c81845ae2aa7a9a66869f, type: 3}
       propertyPath: moveDistance
