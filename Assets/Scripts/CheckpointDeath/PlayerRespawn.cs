@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     private Vector2 lastCheckpointPosition;  // Store the last checkpoint position
+    private PlayerController controller;
 
     [Header("UI")]
     [SerializeField] private GameObject respawnPanel;  // UI panel for respawn
@@ -15,6 +16,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        controller = GetComponent<PlayerController>();
         lastCheckpointPosition = transform.position;  // Initialize checkpoint to start position
 
         if (respawnPanel != null)
@@ -34,6 +36,8 @@ public class Player : MonoBehaviour
     {
         deathClipToPlay = deathClip;  // Set the death audio clip
         StartCoroutine(RespawnPlayer());  // Start respawn coroutine
+        if (controller != null)
+            controller.SetDead(true);
     }
 
     // Method called from UnityEvent when a trap triggers the player's death
@@ -80,5 +84,8 @@ public class Player : MonoBehaviour
 
         // Reset the level (traps, platforms, etc.)
         LevelResetManager.Instance.ResetLevel();
+        if (controller != null)
+            controller.SetDead(false);
+
     }
 }

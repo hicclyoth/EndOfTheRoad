@@ -6,7 +6,13 @@ public class PlayerDeath : MonoBehaviour
 
     public void Die()
     {
-        Instantiate(deathParticles, transform.position, Quaternion.identity);
+        GameObject fx = Instantiate(deathParticles, transform.position, Quaternion.identity);
+
+        ParticleSystem ps = fx.GetComponent<ParticleSystem>();
+        if (ps != null)
+        {
+            ps.Play();
+            Destroy(fx, ps.main.duration);
+        }
     }
 }
-

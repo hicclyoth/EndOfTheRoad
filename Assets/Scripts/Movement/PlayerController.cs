@@ -16,6 +16,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool jumpUsed = false;
 
+    private bool isDead = false;
+
+    public void SetDead(bool dead)
+    {
+        isDead = dead;
+        rb.linearVelocity = Vector2.zero; // Stop movement immediately
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,6 +31,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (isDead) return; // Block input if dead
+
         HandleMovement();
         HandleJump();
     }
