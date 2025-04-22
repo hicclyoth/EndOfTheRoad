@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 84944ee0d85426f4ea278ad295ce0967
+guid: 6b737c4943aaba84ab760f08c29acd67
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8374551756492938019
-    second: 20250409_190656_0
+      213: 3981984063745994609
+    second: roadi_0
+  - first:
+      213: 5783968491676676658
+    second: roadi_1
+  - first:
+      213: 4438931304362097824
+    second: roadi_2
+  - first:
+      213: 9058268746783756936
+    second: roadi_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 20250409_190656_0
+      name: roadi_0
       rect:
         serializedVersion: 2
-        x: 48
+        x: 0
         y: 0
-        width: 73
-        height: 343
+        width: 458
+        height: 155
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 35}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17fa8d49869d24730800000000000000
+      internalID: 3981984063745994609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadi_1
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 178
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd46d193c8d97cb80800000000000000
-      internalID: -8374551756492938019
+      spriteID: 232b07ac2b8c44050800000000000000
+      internalID: 5783968491676676658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadi_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 162
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ac3ddab0804a9d30800000000000000
+      internalID: 4438931304362097824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roadi_3
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 159
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8829114be6f65bd70800000000000000
+      internalID: 9058268746783756936
       vertices: []
       indices: 
       edges: []
@@ -138,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 951c853fc02b64645a34300f33bcee4a
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      20250409_190656_0: -8374551756492938019
+      roadi_0: 3981984063745994609
+      roadi_1: 5783968491676676658
+      roadi_2: 4438931304362097824
+      roadi_3: 9058268746783756936
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
