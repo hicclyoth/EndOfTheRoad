@@ -13,36 +13,41 @@ public class MoveTrap : MonoBehaviour, IResettable
     private Vector2 targetPosition;
     private bool isMoving = false;
 
+    private Vector2 velocity = Vector2.zero; 
+
     private void Start()
     {
-        // Register this trap with the LRM to allow reset functionality
         startPosition = transform.position;
         LevelResetManager.Instance.Register(this);
     }
 
     private void Update()
     {
-        // If the trap is moving, update its position towards the target position
         if (isMoving)
         {
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            transform.position = Vector2.SmoothDamp(
+                transform.position,
+                targetPosition,
+                ref velocity,
+                0.2f,           
+                moveSpeed    
+            );
 
-            // Stop moving when the trap reaches the target position
-            if ((Vector2)transform.position == targetPosition)
+            if (Vector2.Distance(transform.position, targetPosition) < 0.01f)
             {
+                transform.position = targetPosition;
                 isMoving = false;
+                velocity = Vector2.zero;
             }
         }
     }
 
-    // Starts the movement of the trap to its target position
     public void StartMoving()
     {
         targetPosition = (Vector2)transform.position + GetDirectionVector() * moveDistance;
         isMoving = true;
     }
 
-    // Get the direction for movement
     private Vector2 GetDirectionVector()
     {
         switch (direction)
@@ -55,7 +60,6 @@ public class MoveTrap : MonoBehaviour, IResettable
         }
     }
 
-    // When a player collides with the trap, push the player away
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -69,10 +73,10 @@ public class MoveTrap : MonoBehaviour, IResettable
         }
     }
 
-    // This method will be called when the game is reset
     public void ResetState()
     {
-        transform.position = startPosition; // Reset trap position
-        isMoving = false; // Stop the trap from moving
+        transform.position = startPosition;
+        isMoving = false;
+        velocity = Vector2.zero;
     }
 }

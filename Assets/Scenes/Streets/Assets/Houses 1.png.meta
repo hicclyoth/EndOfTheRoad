@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: e411682ae2c2c3f4d895dedd517a9747
+guid: a88ac108eba2dc94c9709b46aa5f7c93
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5665062242083941757
-    second: Tile Desert_0
+      213: -1282889085208827916
+    second: houses1_pale_0
+  - first:
+      213: 5577400344228197018
+    second: houses1_pale_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,16 +40,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tile Desert_0
+      name: houses1_pale_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 672
-        height: 672
+        y: 339
+        width: 245
+        height: 594
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 382db16d7e7a161b0800000000000000
-      internalID: -5665062242083941757
+      spriteID: 4f7e6ed8c23423ee0800000000000000
+      internalID: -1282889085208827916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houses1_pale_1
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 307
+        width: 1517
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92fcdf0018e66d40800000000000000
+      internalID: 5577400344228197018
       vertices: []
       indices: 
       edges: []
@@ -151,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tile Desert_0: -5665062242083941757
+      houses1_pale_0: -1282889085208827916
+      houses1_pale_1: 5577400344228197018
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

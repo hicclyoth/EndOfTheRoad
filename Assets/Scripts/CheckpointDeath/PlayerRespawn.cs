@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         }
 
         // Freeze the game time (pause the game)
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
 
         // Show the respawn UI
         if (respawnPanel != null)
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
             yield return null;
         }
 
-        Time.timeScale = 1f;  // Unfreeze the time (resume the game)
+        //Time.timeScale = 1f;  // Unfreeze the time (resume the game)
         transform.position = lastCheckpointPosition;  // Move the player to the last checkpoint
 
         if (respawnPanel != null)
