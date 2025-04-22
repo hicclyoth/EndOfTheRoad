@@ -2,29 +2,30 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public float camSpeed = 1.5f;   // Camera follow speed
-    public Transform target;        // Target the camera follows
-    public bool followPlayer = false; // Whether the camera is following the player
+    public float camSpeed = 5f;   
+    public Transform target;
+    public bool followPlayer = false; 
+    public Vector2 offset;
 
-    void FixedUpdate()
+    void LateUpdate()
     {
-        // Move the camera if following the player and target is assigned
         if (followPlayer && target != null)
         {
-            Vector3 targetPosition = new Vector3(target.position.x, target.position.y, -10f);
-            transform.position = Vector3.Slerp(transform.position, targetPosition, camSpeed * Time.deltaTime);
+            Vector3 targetPosition = new Vector3(
+                target.position.x + offset.x,
+                target.position.y + offset.y,
+                -10f
+            );
+
+            transform.position = Vector3.Lerp(
+                transform.position,
+                targetPosition,
+                camSpeed * Time.deltaTime
+            );
         }
     }
 
-    // Start following the target
-    public void StartFollowing()
-    {
-        followPlayer = true;
-    }
+    public void StartFollowing() => followPlayer = true;
 
-    // Stop following the target
-    public void StopFollowing()
-    {
-        followPlayer = false;
-    }
+    public void StopFollowing() => followPlayer = false;
 }
