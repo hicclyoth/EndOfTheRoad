@@ -423,6 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &127004682
 Animator:
   serializedVersion: 7
@@ -805,6 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &241697429
 Animator:
   serializedVersion: 7
@@ -1041,6 +1043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &326736388
 Animator:
   serializedVersion: 7
@@ -1271,15 +1274,15 @@ PrefabInstance:
     - target: {fileID: 2741732986553073607, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 127004681}
     - target: {fileID: 2741732986553073607, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1227032357}
     - target: {fileID: 2741732986553073607, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1035625513}
     - target: {fileID: 2741732986553073607, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1319,7 +1322,7 @@ PrefabInstance:
     - target: {fileID: 2741732986553073607, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8300000, guid: 75bc0d057a72c0b4dbf280191604d45d, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2741732986553073607, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
@@ -1867,11 +1870,11 @@ PrefabInstance:
       objectReference: {fileID: 702410947}
     - target: {fileID: 5037842179323148767, guid: 59ff9f40ecc6aa94090e4bf3dc054d4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.95
+      value: 24.51
       objectReference: {fileID: 0}
     - target: {fileID: 5037842179323148767, guid: 59ff9f40ecc6aa94090e4bf3dc054d4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4280744
+      value: -2.27
       objectReference: {fileID: 0}
     - target: {fileID: 5037842179323148767, guid: 59ff9f40ecc6aa94090e4bf3dc054d4a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1984,6 +1987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &460533254
 Animator:
   serializedVersion: 7
@@ -2074,6 +2078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &467685557
 Animator:
   serializedVersion: 7
@@ -2214,6 +2219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &472968122
 Animator:
   serializedVersion: 7
@@ -2868,6 +2874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &618689176
 Animator:
   serializedVersion: 7
@@ -3039,6 +3046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &645481402
 Animator:
   serializedVersion: 7
@@ -3579,11 +3587,11 @@ PrefabInstance:
       objectReference: {fileID: 702410947}
     - target: {fileID: 5037842179323148767, guid: 59ff9f40ecc6aa94090e4bf3dc054d4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.49
+      value: 19.05
       objectReference: {fileID: 0}
     - target: {fileID: 5037842179323148767, guid: 59ff9f40ecc6aa94090e4bf3dc054d4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4280744
+      value: -2.27
       objectReference: {fileID: 0}
     - target: {fileID: 5037842179323148767, guid: 59ff9f40ecc6aa94090e4bf3dc054d4a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3628,7 +3636,7 @@ PrefabInstance:
     - target: {fileID: 7621451298008033116, guid: 59ff9f40ecc6aa94090e4bf3dc054d4a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d020eeb4808df844c9ed7f1a9a406711, type: 3}
+      objectReference: {fileID: 21300000, guid: 0a5afde6be260ee45a7246f375ce7bb4, type: 3}
     - target: {fileID: 7621451298008033116, guid: 59ff9f40ecc6aa94090e4bf3dc054d4a, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -3685,6 +3693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &770724209
 Animator:
   serializedVersion: 7
@@ -3695,7 +3704,7 @@ Animator:
   m_GameObject: {fileID: 770724206}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 079e0091539ae114a82867e2046c8473, type: 2}
+  m_Controller: {fileID: 9100000, guid: 50306c4c466e9f94a9aeaebfa5aa95ea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4205,6 +4214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &858576434
 Animator:
   serializedVersion: 7
@@ -4215,7 +4225,7 @@ Animator:
   m_GameObject: {fileID: 858576431}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 079e0091539ae114a82867e2046c8473, type: 2}
+  m_Controller: {fileID: 9100000, guid: 50306c4c466e9f94a9aeaebfa5aa95ea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4287,7 +4297,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d020eeb4808df844c9ed7f1a9a406711, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a5afde6be260ee45a7246f375ce7bb4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4746,6 +4756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!1 &930428493
 GameObject:
   m_ObjectHideFlags: 0
@@ -5480,7 +5491,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2225966182497516868, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.31
+      value: 19.21
       objectReference: {fileID: 0}
     - target: {fileID: 2225966182497516868, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5537,15 +5548,15 @@ PrefabInstance:
     - target: {fileID: 2741732986553073607, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 770724208}
     - target: {fileID: 2741732986553073607, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1069695979}
     - target: {fileID: 2741732986553073607, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 858576433}
     - target: {fileID: 2741732986553073607, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -5585,7 +5596,7 @@ PrefabInstance:
     - target: {fileID: 2741732986553073607, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8300000, guid: 75bc0d057a72c0b4dbf280191604d45d, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2741732986553073607, guid: e4d5a0bac8d9eef40845f62cd9e131a5, type: 3}
       propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
@@ -5697,6 +5708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &1035625514
 Animator:
   serializedVersion: 7
@@ -6116,6 +6128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &1069695980
 Animator:
   serializedVersion: 7
@@ -6126,7 +6139,7 @@ Animator:
   m_GameObject: {fileID: 1069695977}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 079e0091539ae114a82867e2046c8473, type: 2}
+  m_Controller: {fileID: 9100000, guid: 50306c4c466e9f94a9aeaebfa5aa95ea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6198,7 +6211,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d020eeb4808df844c9ed7f1a9a406711, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a5afde6be260ee45a7246f375ce7bb4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6471,6 +6484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &1202918046
 Animator:
   serializedVersion: 7
@@ -6873,6 +6887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &1227032358
 Animator:
   serializedVersion: 7
@@ -7100,6 +7115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &1244355790
 Animator:
   serializedVersion: 7
@@ -7570,6 +7586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!95 &1410704685
 Animator:
   serializedVersion: 7
@@ -10020,6 +10037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca00f8ce40c2c9646857cc8d2be09b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStateName: Idle
 --- !u!1001 &7781281231373948207
 PrefabInstance:
   m_ObjectHideFlags: 0
