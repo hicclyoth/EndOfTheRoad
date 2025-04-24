@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class LoopingMover : MonoBehaviour, IResettable
 {
+    public enum MoveDirection { Horizontal, Vertical }
+
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float moveDistance = 4f;
+    [SerializeField] private MoveDirection moveDirection = MoveDirection.Horizontal;
 
     private Vector2 startPosition;
     private Vector2 pointA;
@@ -13,8 +16,10 @@ public class LoopingMover : MonoBehaviour, IResettable
     private void Start()
     {
         startPosition = transform.position;
+
+        Vector2 direction = moveDirection == MoveDirection.Horizontal ? Vector2.right : Vector2.up;
         pointA = startPosition;
-        pointB = startPosition + Vector2.right * moveDistance;
+        pointB = startPosition + direction * moveDistance;
         currentTarget = pointB;
 
         LevelResetManager.Instance.Register(this);
