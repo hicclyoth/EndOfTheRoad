@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/test-levels/Prototype.unity
     guid: f4e49a48967dbc343a8edb1f10eefd5f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/level-demos/Level-1-demo.unity
     guid: 825bea7cda8622a4b9b05c4ed935d7c7
+  - enabled: 1
+    path: Assets/Scenes/Streets/Streets.unity
+    guid: 92815d89fffe76b4f92fb251d162706f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3d083d618b382a2458efa20110cb9a43, type: 3}
   m_UseUCBPForAssetBundles: 0

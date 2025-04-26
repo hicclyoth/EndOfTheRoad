@@ -11,6 +11,7 @@ public class MoveTrap : MonoBehaviour, IResettable
 
     private Vector2 startPosition;
     private Vector2 targetPosition;
+    private Rigidbody2D rb;
     private bool isMoving = false;
 
     private Vector2 velocity = Vector2.zero; 
@@ -18,6 +19,7 @@ public class MoveTrap : MonoBehaviour, IResettable
     private void Start()
     {
         startPosition = transform.position;
+        rb = GetComponent<Rigidbody2D>();
         LevelResetManager.Instance.Register(this);
     }
 
@@ -78,5 +80,6 @@ public class MoveTrap : MonoBehaviour, IResettable
         transform.position = startPosition;
         isMoving = false;
         velocity = Vector2.zero;
+        //Physics2D.SyncTransforms();
     }
 }
