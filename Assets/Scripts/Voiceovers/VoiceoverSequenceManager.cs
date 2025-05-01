@@ -6,7 +6,6 @@ public class VoiceoverSequenceManager : MonoBehaviour
 {
     [Header("Voiceover Settings")]
     public AudioClip[] voiceoverClips;  // Array of voiceover clips to play
-    public float minVoiceoverDuration = 20f;  // Minimum duration for each voiceover
 
     [Header("Post Voiceover Actions")]
     public UnityEvent onVoiceoversComplete;  // Event triggered when all voiceovers are complete
@@ -31,7 +30,7 @@ public class VoiceoverSequenceManager : MonoBehaviour
         {
             audioSource.clip = clip;  // Set the audio clip
             audioSource.Play();  // Play the audio clip
-            yield return new WaitForSeconds(Mathf.Max(minVoiceoverDuration, clip.length));  // Wait for the clip to finish (or minimum duration)
+            yield return new WaitForSeconds(clip.length);  // Wait for the clip to finish
 
             onVoiceoverFinished?.Invoke();  // Trigger action after each voiceover finishes
         }
