@@ -40,6 +40,13 @@ public class Player : MonoBehaviour
             controller.SetDead(true);
     }
 
+    public void DisablePlayer()
+    {
+        if (controller != null)
+            controller.SetDead(true); // freezes movement
+    }
+
+
     // Method called from UnityEvent when a trap triggers the player's death
     public void TriggerDeathWithClip(AudioClip clip)
     {
