@@ -2,10 +2,24 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public float camSpeed = 5f;   
+    public float camSpeed = 5f;
     public Transform target;
-    public bool followPlayer = false; 
+    public bool followPlayer = false;
     public Vector2 offset;
+
+    public BoxCollider2D bounds;
+    private Vector2 minPosition;
+    private Vector2 maxPosition;
+
+    void Start()
+    {
+        if (bounds != null)
+        {
+            Bounds b = bounds.bounds;
+            minPosition = b.min;
+            maxPosition = b.max;
+        }
+    }
 
     void LateUpdate()
     {
@@ -16,6 +30,13 @@ public class CameraFollow : MonoBehaviour
                 target.position.y + offset.y,
                 -10f
             );
+
+            // Clamp to bounds if assigned
+            if (bounds != null)
+            {
+                targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
+                targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y);
+            }
 
             transform.position = Vector3.Lerp(
                 transform.position,
