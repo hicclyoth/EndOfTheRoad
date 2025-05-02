@@ -7,10 +7,28 @@ public class LevelTransfer : MonoBehaviour
     public float delay = 1.5f;
     public ParticleSystem transferParticles;
 
+    private bool hasTriggered = false;
+
+    // Trigger from UnityEvent (e.g., button)
+    public void TriggerTransfer()
+    {
+        if (hasTriggered) return;
+        hasTriggered = true;
+
+        if (transferParticles != null)
+            transferParticles.Play();
+
+        StartCoroutine(DelayedTransfer());
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (hasTriggered) return;
+
         if (other.CompareTag("Player"))
         {
+            hasTriggered = true;
+
             Player player = other.GetComponent<Player>();
             if (player != null)
             {
