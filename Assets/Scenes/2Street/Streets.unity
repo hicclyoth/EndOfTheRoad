@@ -614,7 +614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   direction: 3
-  moveDistance: 10
+  moveDistance: 7.5
   pushForce: 5
 --- !u!483693784 &9536612
 TilemapRenderer:
@@ -659,7 +659,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -2805,7 +2805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 20
   direction: 0
   moveDistance: 10
   pushForce: 5
@@ -6333,7 +6333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   direction: 3
-  moveDistance: 10
+  moveDistance: 7.5
   pushForce: 5
 --- !u!114 &389903567
 MonoBehaviour:
@@ -7540,7 +7540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 20
   direction: 0
   moveDistance: 10
   pushForce: 5
@@ -8511,7 +8511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   direction: 1
-  moveDistance: 1.25
+  moveDistance: 3
   pushForce: 5
 --- !u!483693784 &601691843
 TilemapRenderer:
@@ -9331,7 +9331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 10
   direction: 1
   moveDistance: 1.25
   pushForce: 5
@@ -11327,11 +11327,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5346967052282752791, guid: 66317be67250530428026f553eec04d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 64.5
+      value: -52.7
       objectReference: {fileID: 0}
     - target: {fileID: 5346967052282752791, guid: 66317be67250530428026f553eec04d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.4
+      value: -19.11
       objectReference: {fileID: 0}
     - target: {fileID: 5346967052282752791, guid: 66317be67250530428026f553eec04d2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17815,7 +17815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 20
   direction: 0
   moveDistance: 10
   pushForce: 5
@@ -18389,7 +18389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 7
   direction: 1
   moveDistance: 1.25
   pushForce: 5
