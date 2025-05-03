@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class MoveTrap : MonoBehaviour, IResettable
 {
-    public enum MoveDirection { Left, Right, Up, Down }
+    public enum MoveDirection
+    {
+        Left, Right, Up, Down,
+        UpLeft, UpRight, DownLeft, DownRight
+    }
+
 
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private MoveDirection direction;
@@ -58,9 +63,14 @@ public class MoveTrap : MonoBehaviour, IResettable
             case MoveDirection.Right: return Vector2.right;
             case MoveDirection.Up: return Vector2.up;
             case MoveDirection.Down: return Vector2.down;
+            case MoveDirection.UpLeft: return (Vector2.up + Vector2.left).normalized;
+            case MoveDirection.UpRight: return (Vector2.up + Vector2.right).normalized;
+            case MoveDirection.DownLeft: return (Vector2.down + Vector2.left).normalized;
+            case MoveDirection.DownRight: return (Vector2.down + Vector2.right).normalized;
             default: return Vector2.zero;
         }
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
