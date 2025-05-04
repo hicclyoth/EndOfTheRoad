@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
     private bool wasGrounded = true;
+    private bool isLanding = false;
+    private bool justJumped = false;
+    private bool landingLocked = false;
 
 
     public void SetDead(bool dead)
@@ -50,11 +53,26 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsGrounded", isGrounded);
         animator.SetFloat("YVelocity", rb.linearVelocity.y);
 
+        bool isFalling = rb.linearVelocity.y < -0.1f;
+
         if (isGrounded && !wasGrounded)
         {
             animator.SetTrigger("Land");
         }
+
+
+
         wasGrounded = isGrounded;
+    }
+
+    void UnlockLanding()
+    {
+        landingLocked = false;
+    }
+
+    public void OnLandAnimationComplete()
+    {
+        isLanding = false;
     }
 
     void HandleMovement()
@@ -66,17 +84,17 @@ public class PlayerController : MonoBehaviour
         else if (rightButton != null && rightButton.IsPressed)
             move = 1f;
 
-        if (move < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (move > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1); 
-        }
-
         rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
+
+        // Flip only X scale without touching Y/Z
+        if (move != 0)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x = move < 0 ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
+            transform.localScale = scale;
+        }
     }
+
 
     void HandleJump(bool isGrounded)
     {
@@ -84,12 +102,19 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             jumpUsed = true;
+            justJumped = true;
+            Invoke(nameof(ResetJustJumped), 0.1f); // buffer to block accidental landing
         }
 
         if (!jumpButton.IsPressed && isGrounded)
         {
             jumpUsed = false;
         }
+    }
+
+    void ResetJustJumped()
+    {
+        justJumped = false;
     }
 
 
