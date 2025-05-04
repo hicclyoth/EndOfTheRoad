@@ -18,6 +18,10 @@ public class PlayerController : MonoBehaviour
 
     private bool isDead = false;
 
+    private Animator animator;
+    private bool wasGrounded = true;
+
+
     public void SetDead(bool dead)
     {
         isDead = dead;
@@ -27,6 +31,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        Debug.Log("Animator found: " + animator);
+
     }
 
     void Update()
@@ -34,7 +41,20 @@ public class PlayerController : MonoBehaviour
         if (isDead) return; // Block input if dead
 
         HandleMovement();
-        HandleJump();
+        bool isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+        HandleMovement();
+        HandleJump(isGrounded);
+
+        // Update Animator Parameters
+        animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
+        animator.SetBool("IsGrounded", isGrounded);
+        animator.SetFloat("YVelocity", rb.linearVelocity.y);
+
+        if (isGrounded && !wasGrounded)
+        {
+            animator.SetTrigger("Land");
+        }
+        wasGrounded = isGrounded;
     }
 
     void HandleMovement()
@@ -46,13 +66,20 @@ public class PlayerController : MonoBehaviour
         else if (rightButton != null && rightButton.IsPressed)
             move = 1f;
 
+        if (move < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (move > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1); 
+        }
+
         rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
     }
 
-    void HandleJump()
+    void HandleJump(bool isGrounded)
     {
-        bool isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
-
         if (jumpButton != null && jumpButton.IsPressed && isGrounded && !jumpUsed)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -64,6 +91,7 @@ public class PlayerController : MonoBehaviour
             jumpUsed = false;
         }
     }
+
 
     void OnDrawGizmosSelected()
     {
