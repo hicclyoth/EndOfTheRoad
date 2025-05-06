@@ -465,7 +465,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -44, y: -21, z: 0}
   m_Size: {x: 44, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -932,7 +932,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -44, y: -21, z: 0}
   m_Size: {x: 44, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -2053,7 +2053,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -2188,7 +2188,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -46, y: -21, z: 0}
   m_Size: {x: 46, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -2484,7 +2484,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -44, y: -21, z: 0}
   m_Size: {x: 44, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -3221,7 +3221,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -45, y: -25, z: 0}
   m_Size: {x: 45, y: 25, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -3517,7 +3517,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -44, y: -21, z: 0}
   m_Size: {x: 44, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -6280,7 +6280,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -44, y: -21, z: 0}
   m_Size: {x: 44, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -6732,7 +6732,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -44, y: -21, z: 0}
   m_Size: {x: 44, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -7028,7 +7028,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -44, y: -21, z: 0}
   m_Size: {x: 44, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -7864,7 +7864,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -45, y: -25, z: 0}
   m_Size: {x: 45, y: 25, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -7886,6 +7886,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &564105601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1805231089219197632, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
+  m_PrefabInstance: {fileID: 8210760202612718612}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &564105607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564105601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1b5264e52e8064291e3ebd89842dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &567210756
 GameObject:
   m_ObjectHideFlags: 0
@@ -8300,7 +8317,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -44, y: -21, z: 0}
   m_Size: {x: 44, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -8854,7 +8871,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -45, y: -22, z: 0}
   m_Size: {x: 45, y: 22, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -9516,7 +9533,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -44, y: -21, z: 0}
   m_Size: {x: 44, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -10516,7 +10533,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -44, y: -21, z: 0}
   m_Size: {x: 44, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -28556,7 +28573,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -44, y: -21, z: 0}
   m_Size: {x: 44, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -28578,6 +28595,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &1488004328 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5913990991674766515, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
+  m_PrefabInstance: {fileID: 8210760202612718612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1489367397
 GameObject:
   m_ObjectHideFlags: 0
@@ -30015,7 +30037,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -45, y: -25, z: 0}
   m_Size: {x: 45, y: 25, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -30311,7 +30333,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -44, y: -21, z: 0}
   m_Size: {x: 44, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -31150,6 +31172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelTransfer
       objectReference: {fileID: 0}
+    - target: {fileID: 4479095220292811793, guid: 65dedab4d74801642b16d83ddfd0747f, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1488004328}
     - target: {fileID: 8028364466950881172, guid: 65dedab4d74801642b16d83ddfd0747f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 87.09643
@@ -32436,7 +32462,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -44456,7 +44482,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 0.16834323, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -44, y: -21, z: 0}
   m_Size: {x: 44, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -45164,17 +45190,25 @@ PrefabInstance:
       propertyPath: rightButton
       value: 
       objectReference: {fileID: 2016921044}
+    - target: {fileID: 4006940093547566243, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.47
+      objectReference: {fileID: 0}
     - target: {fileID: 5123015526566828196, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
       propertyPath: bounds
       value: 
       objectReference: {fileID: 1543999346}
+    - target: {fileID: 5123015526566828196, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
+      propertyPath: offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5913990991674766515, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -58.38
+      value: -56.9
       objectReference: {fileID: 0}
     - target: {fileID: 5913990991674766515, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.86
+      value: -20.02
       objectReference: {fileID: 0}
     - target: {fileID: 5913990991674766515, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
       propertyPath: m_LocalPosition.z
@@ -45215,7 +45249,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1805231089219197632, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 564105607}
   m_SourcePrefab: {fileID: 100100000, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

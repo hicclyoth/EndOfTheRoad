@@ -11,6 +11,10 @@ public class CameraFollow : MonoBehaviour
     private Vector2 minPosition;
     private Vector2 maxPosition;
 
+    private Camera cam;
+    private float originalSize;
+    private bool ignoreBounds = false;
+
     void Start()
     {
         if (bounds != null)
@@ -19,6 +23,10 @@ public class CameraFollow : MonoBehaviour
             minPosition = b.min;
             maxPosition = b.max;
         }
+
+        cam = Camera.main;
+        if (cam != null)
+            originalSize = cam.orthographicSize;
     }
 
     void LateUpdate()
@@ -31,8 +39,7 @@ public class CameraFollow : MonoBehaviour
                 -10f
             );
 
-            // Clamp to bounds if assigned
-            if (bounds != null)
+            if (!ignoreBounds && bounds != null)
             {
                 targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
                 targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y);
@@ -47,6 +54,25 @@ public class CameraFollow : MonoBehaviour
     }
 
     public void StartFollowing() => followPlayer = true;
-
     public void StopFollowing() => followPlayer = false;
+
+    public void ResetOffset() => offset = Vector2.zero;
+
+    public void ZoomIn(float targetSize = 2.5f, float speed = 3f)
+    {
+        if (cam != null)
+            StartCoroutine(ZoomInCoroutine(targetSize, speed));
+    }
+
+    private System.Collections.IEnumerator ZoomInCoroutine(float targetSize, float speed)
+    {
+        IgnoreBounds(true);
+        while (cam.orthographicSize > targetSize)
+        {
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize, speed * Time.deltaTime);
+            yield return null;
+        }
+    }
+
+    public void IgnoreBounds(bool value) => ignoreBounds = value;
 }
