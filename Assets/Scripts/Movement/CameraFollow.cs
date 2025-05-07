@@ -6,14 +6,13 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
     public bool followPlayer = false;
     public Vector2 offset;
-
     public BoxCollider2D bounds;
     private Vector2 minPosition;
     private Vector2 maxPosition;
-
     private Camera cam;
     private float originalSize;
     private bool ignoreBounds = false;
+    private Coroutine zoomCoroutine;
 
     void Start()
     {
@@ -23,8 +22,9 @@ public class CameraFollow : MonoBehaviour
             minPosition = b.min;
             maxPosition = b.max;
         }
-
-        cam = Camera.main;
+        cam = GetComponentInChildren<Camera>();
+        if (cam == null)
+            cam = Camera.main;
         if (cam != null)
             originalSize = cam.orthographicSize;
     }
@@ -36,7 +36,7 @@ public class CameraFollow : MonoBehaviour
             Vector3 targetPosition = new Vector3(
                 target.position.x + offset.x,
                 target.position.y + offset.y,
-                -10f
+                transform.position.z  // Keep the original z position
             );
 
             if (!ignoreBounds && bounds != null)
@@ -54,6 +54,7 @@ public class CameraFollow : MonoBehaviour
     }
 
     public void StartFollowing() => followPlayer = true;
+
     public void StopFollowing() => followPlayer = false;
 
     public void ResetOffset() => offset = Vector2.zero;
@@ -61,18 +62,54 @@ public class CameraFollow : MonoBehaviour
     public void ZoomIn(float targetSize = 2.5f, float speed = 3f)
     {
         if (cam != null)
-            StartCoroutine(ZoomInCoroutine(targetSize, speed));
+        {
+            // Stop any existing zoom coroutine
+            if (zoomCoroutine != null)
+                StopCoroutine(zoomCoroutine);
+
+            zoomCoroutine = StartCoroutine(ZoomInCoroutine(targetSize, speed));
+        }
+        else
+        {
+            Debug.LogWarning("Camera reference is null, cannot zoom!");
+        }
     }
 
     private System.Collections.IEnumerator ZoomInCoroutine(float targetSize, float speed)
     {
         IgnoreBounds(true);
-        while (cam.orthographicSize > targetSize)
+        float startSize = cam.orthographicSize;
+        float elapsedTime = 0f;
+        float duration = 1.0f; // Duration for smooth zoom, adjust as needed
+
+        while (elapsedTime < duration)
         {
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize, speed * Time.deltaTime);
+            elapsedTime += Time.deltaTime * speed;
+            float t = Mathf.Clamp01(elapsedTime / duration);
+            cam.orthographicSize = Mathf.Lerp(startSize, targetSize, t);
+
+            if (Mathf.Abs(cam.orthographicSize - targetSize) < 0.01f)
+                break;
+
             yield return null;
         }
+
+        // Ensure we reach exact target size
+        cam.orthographicSize = targetSize;
+        zoomCoroutine = null;
     }
 
     public void IgnoreBounds(bool value) => ignoreBounds = value;
+
+    public void ResetZoom()
+    {
+        if (cam != null)
+        {
+            // Stop any existing zoom coroutine
+            if (zoomCoroutine != null)
+                StopCoroutine(zoomCoroutine);
+
+            cam.orthographicSize = originalSize;
+        }
+    }
 }

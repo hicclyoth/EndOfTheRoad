@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest/Forest.unity
     guid: 92815d89fffe76b4f92fb251d162706f
+  - enabled: 1
+    path: Assets/Scenes/Future/Future.unity
+    guid: 1c4e340f42fee4c4fae6b81ddc2c6dc0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3d083d618b382a2458efa20110cb9a43, type: 3}
   m_UseUCBPForAssetBundles: 0

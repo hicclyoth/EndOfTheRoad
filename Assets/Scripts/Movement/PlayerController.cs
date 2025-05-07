@@ -79,38 +79,41 @@ public class PlayerController : MonoBehaviour
     {
         float move = 0f;
 
-        if (leftButton != null && leftButton.IsPressed)
+        // keyboard
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)
+            || (leftButton != null && leftButton.IsPressed))
             move = -1f;
-        else if (rightButton != null && rightButton.IsPressed)
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)
+                 || (rightButton != null && rightButton.IsPressed))
             move = 1f;
 
         rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
 
-        // Flip only X scale without touching Y/Z
         if (move != 0)
         {
-            Vector3 scale = transform.localScale;
-            scale.x = move < 0 ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
-            transform.localScale = scale;
+            Vector3 s = transform.localScale;
+            s.x = move < 0 ? -Mathf.Abs(s.x) : Mathf.Abs(s.x);
+            transform.localScale = s;
         }
     }
 
-
     void HandleJump(bool isGrounded)
     {
-        if (jumpButton != null && jumpButton.IsPressed && isGrounded && !jumpUsed)
+        bool kbJump = Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
+        bool touchJump = jumpButton != null && jumpButton.IsPressed;
+
+        if ((kbJump || touchJump) && isGrounded && !jumpUsed)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             jumpUsed = true;
             justJumped = true;
-            Invoke(nameof(ResetJustJumped), 0.1f); // buffer to block accidental landing
+            Invoke(nameof(ResetJustJumped), 0.1f);
         }
 
-        if (!jumpButton.IsPressed && isGrounded)
-        {
+        if (!touchJump && isGrounded && !Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.UpArrow))
             jumpUsed = false;
-        }
     }
+
 
     void ResetJustJumped()
     {

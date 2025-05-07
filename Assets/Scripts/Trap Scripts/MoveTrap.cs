@@ -13,6 +13,8 @@ public class MoveTrap : MonoBehaviour, IResettable
     [SerializeField] private MoveDirection direction;
     [SerializeField] private float moveDistance = 4f;
     [SerializeField] private float pushForce = 5f;
+    [SerializeField] private float moveDelay = 0f;
+
 
     private Vector2 startPosition;
     private Vector2 targetPosition;
@@ -51,9 +53,17 @@ public class MoveTrap : MonoBehaviour, IResettable
 
     public void StartMoving()
     {
+        StartCoroutine(StartMoveAfterDelay());
+    }
+
+    private System.Collections.IEnumerator StartMoveAfterDelay()
+    {
+        yield return new WaitForSeconds(moveDelay);
+
         targetPosition = (Vector2)transform.position + GetDirectionVector() * moveDistance;
         isMoving = true;
     }
+
 
     private Vector2 GetDirectionVector()
     {
@@ -83,6 +93,11 @@ public class MoveTrap : MonoBehaviour, IResettable
                 playerRb.AddForce(pushDirection * pushForce, ForceMode2D.Impulse);
             }
         }
+    }
+
+    public bool IsMoving()
+    {
+        return isMoving;
     }
 
     public void ResetState()
