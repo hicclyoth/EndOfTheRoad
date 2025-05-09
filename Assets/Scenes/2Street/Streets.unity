@@ -331,11 +331,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 2
   direction: 1
   moveDistance: 1.25
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &8968286
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -613,11 +619,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 20
   direction: 3
   moveDistance: 10
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &9536612
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -1267,7 +1279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3722773870398534149, guid: b61a9528df22a604b8c1fb9601d94e8a, type: 3}
       propertyPath: m_Size.x
-      value: 258.9245
+      value: 124.70466
       objectReference: {fileID: 0}
     - target: {fileID: 3722773870398534149, guid: b61a9528df22a604b8c1fb9601d94e8a, type: 3}
       propertyPath: m_Size.y
@@ -1275,7 +1287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3722773870398534149, guid: b61a9528df22a604b8c1fb9601d94e8a, type: 3}
       propertyPath: m_Offset.x
-      value: 62.040115
+      value: 3.9635887
       objectReference: {fileID: 0}
     - target: {fileID: 3722773870398534149, guid: b61a9528df22a604b8c1fb9601d94e8a, type: 3}
       propertyPath: m_Offset.y
@@ -2016,11 +2028,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 2
   direction: 4
   moveDistance: 1
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &238373986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2438,11 +2456,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 2
   direction: 1
   moveDistance: 1.25
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &271498468
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -2901,11 +2925,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 20
   direction: 0
   moveDistance: 10
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &339998070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3476,11 +3506,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 2
   direction: 7
   moveDistance: 1.25
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &351856051
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -6240,11 +6276,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 2
   direction: 1
   moveDistance: 1.25
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &384886481
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -6430,11 +6472,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 20
   direction: 3
   moveDistance: 7.5
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &389903567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6990,11 +7038,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 2
   direction: 1
   moveDistance: 1.25
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &442691277
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -7641,11 +7695,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 20
   direction: 0
   moveDistance: 10
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &544891035
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -8281,11 +8341,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 2
   direction: 4
   moveDistance: 1
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &582768218
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -8543,7 +8609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &600568361
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8707,7 +8773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  moveDistance: 4
+  moveDistance: -2.5
   moveDirection: 1
 --- !u!114 &601691840
 MonoBehaviour:
@@ -8798,11 +8864,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 2
   direction: 1
-  moveDistance: 3
-  pushForce: 5
+  moveDistance: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &601691843
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -9631,11 +9703,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 10
   direction: 1
   moveDistance: 1.25
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &676460303
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -10715,11 +10793,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 2
   direction: 1
   moveDistance: 1.25
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &913093509
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -12106,11 +12190,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 40
   direction: 3
   moveDistance: 30
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!1 &1183881893
 GameObject:
   m_ObjectHideFlags: 0
@@ -16869,11 +16959,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 2
   direction: 1
   moveDistance: 1.25
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &1461558903
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -17120,7 +17216,7 @@ TilemapCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4b2b1fb46cd1be947960d5566ba7ee26, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -17160,11 +17256,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  usePhysics: 0
+  moveSpeed: 1000
   direction: 1
   moveDistance: 2
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &1501749875
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -18057,11 +18159,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 20
   direction: 0
   moveDistance: 10
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &1584431853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18632,11 +18740,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 7
   direction: 1
   moveDistance: 1.25
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &1603609784
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -19388,7 +19502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1814141812
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19831,11 +19945,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 5
   direction: 1
   moveDistance: 2
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &1866514896
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -20209,7 +20329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1901475056
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20457,11 +20577,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 0.5
   direction: 2
   moveDistance: 4
-  pushForce: 5
   moveDelay: 1
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!19719996 &1944482205
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -20827,7 +20953,7 @@ TilemapCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4b2b1fb46cd1be947960d5566ba7ee26, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -32784,11 +32910,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 2
   direction: 1
   moveDistance: 1.25
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &1998706174
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -33305,11 +33437,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 5
   direction: 1
   moveDistance: 2
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!483693784 &2130886389
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -33617,6 +33755,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 465320588}
     - target: {fileID: 3275630439001215432, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
+      propertyPath: jumpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a5d54f7e0babf104185ae9b796c94014, type: 3}
+    - target: {fileID: 3275630439001215432, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
+      propertyPath: sfxGroup
+      value: 
+      objectReference: {fileID: 2761416921434823386, guid: 008f7b9adbb47ed499160e96069d66a0, type: 2}
+    - target: {fileID: 3275630439001215432, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
+      propertyPath: walkClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fdc45259f6b5165459c61e62a9fa92d5, type: 3}
+    - target: {fileID: 3275630439001215432, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
       propertyPath: jumpButton
       value: 
       objectReference: {fileID: 1042689560}
@@ -33646,7 +33796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5913990991674766515, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -56.9
+      value: -59.03
       objectReference: {fileID: 0}
     - target: {fileID: 5913990991674766515, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33730,6 +33880,8 @@ MonoBehaviour:
   delay: 3
   transferParticles: {fileID: 8210760202612718614}
   playerTransform: {fileID: 8210760202612718613}
+  zoomTargetSize: 2.5
+  zoomSpeed: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -8,46 +8,92 @@ public class MoveTrap : MonoBehaviour, IResettable
         UpLeft, UpRight, DownLeft, DownRight
     }
 
-
+    [Header("Movement Settings")]
+    [SerializeField] private bool usePhysics = false;
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private MoveDirection direction;
     [SerializeField] private float moveDistance = 4f;
-    [SerializeField] private float pushForce = 5f;
     [SerializeField] private float moveDelay = 0f;
+
+    [Header("Push Player Settings")]
+    [SerializeField] private float pushForce = 5f;
+
+    [Header("Camera Shake (while moving)")]
+    [SerializeField] private bool shakeCameraOnMove = false;
+    [SerializeField] private float shakeMagnitude = 0.2f;
+
+    [Header("Rotation")]
+    [SerializeField] private bool rotateWhileMoving = false;
+    [SerializeField] private float rotationSpeed = 180f;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip startMoveSound;
+
+    private AudioSource audioSource;
 
 
     private Vector2 startPosition;
     private Vector2 targetPosition;
     private Rigidbody2D rb;
     private bool isMoving = false;
-
-    private Vector2 velocity = Vector2.zero; 
+    private bool hasStartedMoving = false;
+    private Vector2 velocity = Vector2.zero;
 
     private void Start()
     {
-        startPosition = transform.position;
         rb = GetComponent<Rigidbody2D>();
+        startPosition = transform.position;
         LevelResetManager.Instance.Register(this);
+        // Ensure AudioSource exists
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     private void Update()
     {
-        if (isMoving)
+        if (!usePhysics && isMoving)
         {
             transform.position = Vector2.SmoothDamp(
                 transform.position,
                 targetPosition,
                 ref velocity,
-                0.2f,           
-                moveSpeed    
+                0.2f,
+                moveSpeed
             );
 
             if (Vector2.Distance(transform.position, targetPosition) < 0.01f)
             {
                 transform.position = targetPosition;
-                isMoving = false;
-                velocity = Vector2.zero;
+                StopMovement();
             }
+        }
+
+        if (rotateWhileMoving && hasStartedMoving)
+        {
+            transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (usePhysics && isMoving)
+        {
+            Vector2 newPos = Vector2.MoveTowards(rb.position, targetPosition, moveSpeed * Time.fixedDeltaTime);
+            rb.MovePosition(newPos);
+
+            if (Vector2.Distance(rb.position, targetPosition) < 0.01f)
+            {
+                rb.position = targetPosition;
+                StopMovement();
+            }
+        }
+
+        if (usePhysics && rotateWhileMoving && hasStartedMoving)
+        {
+            rb.MoveRotation(rb.rotation + rotationSpeed * Time.fixedDeltaTime);
         }
     }
 
@@ -60,10 +106,30 @@ public class MoveTrap : MonoBehaviour, IResettable
     {
         yield return new WaitForSeconds(moveDelay);
 
-        targetPosition = (Vector2)transform.position + GetDirectionVector() * moveDistance;
+        targetPosition = startPosition + GetDirectionVector() * moveDistance;
         isMoving = true;
+        hasStartedMoving = true;
+        if (startMoveSound != null)
+            audioSource.PlayOneShot(startMoveSound);
+
+
+        if (shakeCameraOnMove && CameraShaker.Instance != null)
+        {
+            CameraShaker.Instance.ShakeUntilStopped(shakeMagnitude);
+        }
     }
 
+    private void StopMovement()
+    {
+        isMoving = false;
+        hasStartedMoving = false;
+        velocity = Vector2.zero;
+
+        if (shakeCameraOnMove && CameraShaker.Instance != null)
+        {
+            CameraShaker.Instance.StopShake();
+        }
+    }
 
     private Vector2 GetDirectionVector()
     {
@@ -81,7 +147,6 @@ public class MoveTrap : MonoBehaviour, IResettable
         }
     }
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -95,16 +160,30 @@ public class MoveTrap : MonoBehaviour, IResettable
         }
     }
 
-    public bool IsMoving()
-    {
-        return isMoving;
-    }
+    public bool IsMoving() => isMoving;
 
     public void ResetState()
     {
-        transform.position = startPosition;
+        if (usePhysics)
+        {
+            rb.position = startPosition;
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.rotation = 0f;
+        }
+        else
+        {
+            transform.position = startPosition;
+            transform.rotation = Quaternion.identity;
+        }
+
         isMoving = false;
+        hasStartedMoving = false;
         velocity = Vector2.zero;
-        //Physics2D.SyncTransforms();
+
+        if (shakeCameraOnMove && CameraShaker.Instance != null)
+        {
+            CameraShaker.Instance.StopShake();
+        }
     }
 }

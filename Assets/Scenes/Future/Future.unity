@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 46148884}
   - component: {fileID: 46148883}
   m_Layer: 0
-  m_Name: 7 (7)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -619,11 +619,11 @@ Transform:
   m_GameObject: {fileID: 46148882}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 65.16, y: -1.89, z: 0}
+  m_LocalPosition: {x: 64.94, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &49596041
 GameObject:
@@ -1631,7 +1631,7 @@ GameObject:
   - component: {fileID: 82979636}
   - component: {fileID: 82979635}
   m_Layer: 0
-  m_Name: 7 (9)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1701,11 +1701,11 @@ Transform:
   m_GameObject: {fileID: 82979634}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 90.54, y: 1.38, z: 0}
+  m_LocalPosition: {x: 90.32, y: 1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &97023926
 GameObject:
@@ -1754,11 +1754,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 5
   direction: 1
   moveDistance: 2
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &97023929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21358,7 +21363,7 @@ GameObject:
   - component: {fileID: 385550129}
   - component: {fileID: 385550130}
   m_Layer: 0
-  m_Name: 7 (14)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21373,11 +21378,11 @@ Transform:
   m_GameObject: {fileID: 385550128}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38.8, y: -1, z: 0}
+  m_LocalPosition: {x: -39.02, y: -1.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &385550130
 SpriteRenderer:
@@ -21445,7 +21450,7 @@ GameObject:
   - component: {fileID: 396273507}
   - component: {fileID: 396273506}
   m_Layer: 0
-  m_Name: 7 (13)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21515,11 +21520,11 @@ Transform:
   m_GameObject: {fileID: 396273505}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 139.54001, y: 1.38, z: 0}
+  m_LocalPosition: {x: 139.32, y: 1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &399017082
 GameObject:
@@ -22303,21 +22308,6 @@ Transform:
   - {fileID: 1007757581}
   - {fileID: 1830844113}
   - {fileID: 2101894429}
-  - {fileID: 1536282985}
-  - {fileID: 385550129}
-  - {fileID: 1878281594}
-  - {fileID: 1826575694}
-  - {fileID: 590241388}
-  - {fileID: 915429427}
-  - {fileID: 46148884}
-  - {fileID: 1723150692}
-  - {fileID: 82979636}
-  - {fileID: 1257230716}
-  - {fileID: 559462697}
-  - {fileID: 396273507}
-  - {fileID: 1519552567}
-  - {fileID: 1071284424}
-  - {fileID: 668083291}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &458843473
@@ -22904,7 +22894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &481903303
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23104,11 +23094,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 5
   direction: 1
   moveDistance: 2
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &517509567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23414,11 +23409,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 30
   direction: 0
   moveDistance: 10
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &553163349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23578,7 +23578,7 @@ GameObject:
   - component: {fileID: 559462697}
   - component: {fileID: 559462696}
   m_Layer: 0
-  m_Name: 7 (11)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23648,11 +23648,11 @@ Transform:
   m_GameObject: {fileID: 559462695}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 116.25, y: -1.89, z: 0}
+  m_LocalPosition: {x: 116.03, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &566388596
 GameObject:
@@ -24108,7 +24108,7 @@ GameObject:
   - component: {fileID: 590241388}
   - component: {fileID: 590241387}
   m_Layer: 0
-  m_Name: 7 (5)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24178,11 +24178,11 @@ Transform:
   m_GameObject: {fileID: 590241386}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 47.04, y: -1.89, z: 0}
+  m_LocalPosition: {x: 46.82, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &595289949
 GameObject:
@@ -24745,11 +24745,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 30
   direction: 0
   moveDistance: 10
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &644549407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25214,11 +25219,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 5
   direction: 2
   moveDistance: 1
-  pushForce: 5
   moveDelay: 1
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &657008388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25414,11 +25424,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 5
   direction: 1
   moveDistance: 2
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &659547564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25578,7 +25593,7 @@ GameObject:
   - component: {fileID: 668083291}
   - component: {fileID: 668083290}
   m_Layer: 0
-  m_Name: 7 (2)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25648,11 +25663,11 @@ Transform:
   m_GameObject: {fileID: 668083289}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.16, y: 1.38, z: 0}
+  m_LocalPosition: {x: 20.94, y: 1.27, z: 0}
   m_LocalScale: {x: 1.51, y: 1.51, z: 1.51}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &668380875
 GameObject:
@@ -27052,11 +27067,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 5
   direction: 1
   moveDistance: 2
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &818806476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27871,11 +27891,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 5
   direction: 2
   moveDistance: 1
-  pushForce: 5
   moveDelay: 0.7
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &907817518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28035,7 +28060,7 @@ GameObject:
   - component: {fileID: 915429427}
   - component: {fileID: 915429426}
   m_Layer: 0
-  m_Name: 7 (4)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28105,11 +28130,11 @@ Transform:
   m_GameObject: {fileID: 915429425}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.28, y: 1.38, z: 0}
+  m_LocalPosition: {x: 47.059998, y: 1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &917449466
 PrefabInstance:
@@ -29670,7 +29695,7 @@ GameObject:
   - component: {fileID: 1071284424}
   - component: {fileID: 1071284423}
   m_Layer: 0
-  m_Name: 7 (10)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29740,11 +29765,11 @@ Transform:
   m_GameObject: {fileID: 1071284422}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 116.49, y: 1.38, z: 0}
+  m_LocalPosition: {x: 116.27, y: 1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1074290624
 GameObject:
@@ -30402,11 +30427,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 30
   direction: 0
   moveDistance: 10
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &1109730051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31557,7 +31587,7 @@ GameObject:
   - component: {fileID: 1257230716}
   - component: {fileID: 1257230715}
   m_Layer: 0
-  m_Name: 7 (8)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31627,11 +31657,11 @@ Transform:
   m_GameObject: {fileID: 1257230714}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 90.3, y: -1.89, z: 0}
+  m_LocalPosition: {x: 90.08, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1261339787
 GameObject:
@@ -32802,11 +32832,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 5
   direction: 1
   moveDistance: 2
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &1317202836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33426,7 +33461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1364687284
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35358,7 +35393,7 @@ GameObject:
   - component: {fileID: 1519552567}
   - component: {fileID: 1519552566}
   m_Layer: 0
-  m_Name: 7 (12)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35428,11 +35463,11 @@ Transform:
   m_GameObject: {fileID: 1519552565}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 139.3, y: -1.89, z: 0}
+  m_LocalPosition: {x: 139.08, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1520667747
 GameObject:
@@ -35782,7 +35817,7 @@ GameObject:
   - component: {fileID: 1536282985}
   - component: {fileID: 1536282984}
   m_Layer: 0
-  m_Name: 7
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35852,11 +35887,11 @@ Transform:
   m_GameObject: {fileID: 1536282983}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6613233, y: 1.38, z: 0}
+  m_LocalPosition: {x: -0.88132334, y: 1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1538892695
 GameObject:
@@ -37436,7 +37471,7 @@ GameObject:
   - component: {fileID: 1723150692}
   - component: {fileID: 1723150691}
   m_Layer: 0
-  m_Name: 7 (6)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37506,11 +37541,11 @@ Transform:
   m_GameObject: {fileID: 1723150690}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65.4, y: 1.38, z: 0}
+  m_LocalPosition: {x: 65.18, y: 1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1747263766
 GameObject:
@@ -38541,7 +38576,7 @@ GameObject:
   - component: {fileID: 1826575694}
   - component: {fileID: 1826575693}
   m_Layer: 0
-  m_Name: 7 (1)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38611,11 +38646,11 @@ Transform:
   m_GameObject: {fileID: 1826575692}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 29.11, y: -1.89, z: 0}
+  m_LocalPosition: {x: 28.890001, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1830844112
 GameObject:
@@ -38675,7 +38710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1858844563
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39132,7 +39167,7 @@ GameObject:
   - component: {fileID: 1878281594}
   - component: {fileID: 1878281593}
   m_Layer: 0
-  m_Name: 7 (3)
+  m_Name: Sky Vehicles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39202,11 +39237,11 @@ Transform:
   m_GameObject: {fileID: 1878281592}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.35, y: 1.38, z: 0}
+  m_LocalPosition: {x: 29.130001, y: 1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 454178933}
+  m_Father: {fileID: 2135761190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1883547506
 GameObject:
@@ -39327,11 +39362,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 30
   direction: 0
   moveDistance: 10
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &1887271626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40427,11 +40467,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 5
   direction: 1
   moveDistance: 2
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &2037664589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40917,11 +40962,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 30
   direction: 0
   moveDistance: 10
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &2079574354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41812,6 +41862,21 @@ Transform:
   - {fileID: 1262898579}
   - {fileID: 2025039446}
   - {fileID: 2132298212}
+  - {fileID: 1536282985}
+  - {fileID: 385550129}
+  - {fileID: 1878281594}
+  - {fileID: 1826575694}
+  - {fileID: 590241388}
+  - {fileID: 915429427}
+  - {fileID: 46148884}
+  - {fileID: 1723150692}
+  - {fileID: 82979636}
+  - {fileID: 1257230716}
+  - {fileID: 559462697}
+  - {fileID: 396273507}
+  - {fileID: 1519552567}
+  - {fileID: 1071284424}
+  - {fileID: 668083291}
   m_Father: {fileID: 454178933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2136326916
@@ -41948,11 +42013,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36384c21ac78af34d96c45689eb72cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usePhysics: 0
   moveSpeed: 30
   direction: 0
   moveDistance: 10
-  pushForce: 5
   moveDelay: 0
+  pushForce: 5
+  shakeCameraOnMove: 0
+  shakeMagnitude: 0.2
+  rotateWhileMoving: 0
+  rotationSpeed: 180
 --- !u!114 &2137431286
 MonoBehaviour:
   m_ObjectHideFlags: 0

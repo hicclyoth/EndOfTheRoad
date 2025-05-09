@@ -1,72 +1,88 @@
 using UnityEngine;
+using System.Collections;
 
 public class CameraShaker : MonoBehaviour
 {
     public static CameraShaker Instance;
-    private Vector3 originalPos;
+
+    private Vector3 originalLocalPos;
     private Coroutine shakeCoroutine;
     private bool isShaking = false;
 
     private void Awake()
     {
         Instance = this;
-        originalPos = transform.localPosition;
+        originalLocalPos = transform.localPosition;
     }
 
     public void Shake(float duration = 0.5f, float magnitude = 0.2f)
     {
-        Debug.Log("Camera shake triggered: duration=" + duration + ", magnitude=" + magnitude);
-
-        // Stop any existing shake
-        if (shakeCoroutine != null)
-        {
-            StopCoroutine(shakeCoroutine);
-            transform.localPosition = originalPos;
-        }
-
-        // Store the current position as original if we're not already shaking
-        if (!isShaking)
-        {
-            originalPos = transform.localPosition;
-        }
-
+        StopShake();
         shakeCoroutine = StartCoroutine(ShakeCoroutine(duration, magnitude));
     }
 
-    private System.Collections.IEnumerator ShakeCoroutine(float duration, float magnitude)
+    public void ShakeUntilStopped(float magnitude = 0.2f)
+    {
+        StopShake();
+        shakeCoroutine = StartCoroutine(ShakeUntilStoppedCoroutine(magnitude));
+    }
+
+    public void StopShake()
+    {
+        if (shakeCoroutine != null)
+        {
+            StopCoroutine(shakeCoroutine);
+            shakeCoroutine = null;
+        }
+
+        transform.localPosition = originalLocalPos;
+        isShaking = false;
+    }
+
+    private IEnumerator ShakeCoroutine(float duration, float magnitude)
     {
         isShaking = true;
         float elapsed = 0f;
 
         while (elapsed < duration)
         {
-            // Use a gentler damping for longer shakes to maintain shake effect throughout
-            float percentComplete = elapsed / duration;
-            float damper = 1.0f - Mathf.Clamp01(2.0f * percentComplete - 1.5f);
+            Vector3 shakeOffset = new Vector3(
+                Random.Range(-1f, 1f),
+                Random.Range(-1f, 1f),
+                0f
+            ) * magnitude;
 
-            // Generate noise values for shake
-            float x = Random.Range(-1f, 1f) * magnitude * damper;
-            float y = Random.Range(-1f, 1f) * magnitude * damper;
-
-            // Apply shake offset to original position
-            transform.localPosition = originalPos + new Vector3(x, y, 0f);
+            transform.localPosition = originalLocalPos + shakeOffset;
 
             elapsed += Time.deltaTime;
             yield return null;
         }
 
-        // Reset to original position
-        transform.localPosition = originalPos;
+        transform.localPosition = originalLocalPos;
         isShaking = false;
-        shakeCoroutine = null;
     }
 
-    // Call this if you need to update the original position (e.g., if camera moved)
+    private IEnumerator ShakeUntilStoppedCoroutine(float magnitude)
+    {
+        isShaking = true;
+
+        while (true)
+        {
+            Vector3 shakeOffset = new Vector3(
+                Random.Range(-1f, 1f),
+                Random.Range(-1f, 1f),
+                0f
+            ) * magnitude;
+
+            transform.localPosition = originalLocalPos + shakeOffset;
+
+            yield return null;
+        }
+    }
+
     public void UpdateOriginalPosition()
     {
         if (!isShaking)
-        {
-            originalPos = transform.localPosition;
-        }
+            originalLocalPos = transform.localPosition;
     }
 }
