@@ -31,8 +31,10 @@ public class MoveTrap : MonoBehaviour, IResettable
 
     private AudioSource audioSource;
 
-
     private Vector2 startPosition;
+    private Vector2 initialStartPosition;
+    private Quaternion initialRotation;
+
     private Vector2 targetPosition;
     private Rigidbody2D rb;
     private bool isMoving = false;
@@ -43,8 +45,11 @@ public class MoveTrap : MonoBehaviour, IResettable
     {
         rb = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
+        initialStartPosition = startPosition;
+        initialRotation = transform.rotation;
+
         LevelResetManager.Instance.Register(this);
-        // Ensure AudioSource exists
+
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
@@ -109,9 +114,9 @@ public class MoveTrap : MonoBehaviour, IResettable
         targetPosition = startPosition + GetDirectionVector() * moveDistance;
         isMoving = true;
         hasStartedMoving = true;
+
         if (startMoveSound != null)
             audioSource.PlayOneShot(startMoveSound);
-
 
         if (shakeCameraOnMove && CameraShaker.Instance != null)
         {
@@ -164,17 +169,19 @@ public class MoveTrap : MonoBehaviour, IResettable
 
     public void ResetState()
     {
+        startPosition = initialStartPosition;
+
         if (usePhysics)
         {
             rb.position = startPosition;
+            rb.rotation = initialRotation.eulerAngles.z;
             rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
-            rb.rotation = 0f;
         }
         else
         {
             transform.position = startPosition;
-            transform.rotation = Quaternion.identity;
+            transform.rotation = initialRotation;
         }
 
         isMoving = false;

@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Decor_Cuirass_0: -2697602794970981799
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

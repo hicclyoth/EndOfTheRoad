@@ -310,7 +310,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tracked_Vehicle_0: 4930533323412148075
+      Tracked_Vehicle_1: -8445128249606221708
+      Tracked_Vehicle_2: -2216174012935860555
+      Tracked_Vehicle_3: 346603143346173772
+      Tracked_Vehicle_4: 1418715912428770896
+      Tracked_Vehicle_5: -7205944546953860158
+      Tracked_Vehicle_6: 6594212569689185317
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

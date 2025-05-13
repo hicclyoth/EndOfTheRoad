@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Velocity_Gauges_0: -4449087851752613380
+      Velocity_Gauges_1: -2381788495663207030
+      Velocity_Gauges_2: 4546547927626448630
+      Velocity_Gauges_3: -4984689072053759884
+      Velocity_Gauges_4: -2780183611724860385
+      Velocity_Gauges_5: -8210022328648379435
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

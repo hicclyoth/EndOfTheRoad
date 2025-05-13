@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wooden_Barrel_0: -3771945323496298598
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

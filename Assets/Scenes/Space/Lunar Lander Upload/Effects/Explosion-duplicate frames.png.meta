@@ -960,7 +960,40 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Explosion-duplicate frames_0: 7283389234867742589
+      Explosion-duplicate frames_1: 3226102598535919553
+      Explosion-duplicate frames_10: -5688233100078096289
+      Explosion-duplicate frames_11: -6732688601064732788
+      Explosion-duplicate frames_12: -460395553133324411
+      Explosion-duplicate frames_13: 4939161293448345069
+      Explosion-duplicate frames_14: -967181905465520213
+      Explosion-duplicate frames_15: -3720114310282039744
+      Explosion-duplicate frames_16: -7767658643951541638
+      Explosion-duplicate frames_17: -8766932785869394865
+      Explosion-duplicate frames_18: 6013872823654533251
+      Explosion-duplicate frames_19: 5169849920365684323
+      Explosion-duplicate frames_2: -8459198507567454335
+      Explosion-duplicate frames_20: 1511488452852860724
+      Explosion-duplicate frames_21: -1746583214891473729
+      Explosion-duplicate frames_22: 3669235995905483602
+      Explosion-duplicate frames_23: 4846794282211237127
+      Explosion-duplicate frames_24: -8669783930880360449
+      Explosion-duplicate frames_25: -2426691178332142775
+      Explosion-duplicate frames_26: 7929138978170727395
+      Explosion-duplicate frames_27: 635095900351947510
+      Explosion-duplicate frames_28: -3053295654133435157
+      Explosion-duplicate frames_29: -7245621156328682224
+      Explosion-duplicate frames_3: -2452066289063063878
+      Explosion-duplicate frames_30: -7423609896538988010
+      Explosion-duplicate frames_31: 2623855598236787959
+      Explosion-duplicate frames_32: -5159800771237681538
+      Explosion-duplicate frames_4: -4925424579609640309
+      Explosion-duplicate frames_5: 5563800951126736795
+      Explosion-duplicate frames_6: -5383885591940601289
+      Explosion-duplicate frames_7: -7578798920358625130
+      Explosion-duplicate frames_8: -4587142689191327297
+      Explosion-duplicate frames_9: -5637468736791207
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

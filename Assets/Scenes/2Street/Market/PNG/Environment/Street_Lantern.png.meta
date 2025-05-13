@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Street_Lantern_0: 6298081038464777728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

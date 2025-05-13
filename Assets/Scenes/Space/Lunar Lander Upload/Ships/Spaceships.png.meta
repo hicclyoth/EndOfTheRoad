@@ -510,7 +510,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spaceships_0: 3824464749113777492
+      Spaceships_1: 1132206095249792208
+      Spaceships_10: -15192181568165392
+      Spaceships_11: 2679066100590310079
+      Spaceships_12: -5481986502742383148
+      Spaceships_13: -2565173856860997937
+      Spaceships_14: 6537989418358455831
+      Spaceships_2: -1513770721519998794
+      Spaceships_3: 5210353008261302369
+      Spaceships_4: 4958709792872695805
+      Spaceships_5: 4958473694988434409
+      Spaceships_6: -4103875860814834896
+      Spaceships_7: 1089661974445368432
+      Spaceships_8: -7396095203662698337
+      Spaceships_9: -19636353391941667
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
