@@ -1764,6 +1764,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &97023929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23104,6 +23105,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &517509567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23419,6 +23421,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &553163349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24755,6 +24758,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &644549407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25229,6 +25233,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &657008388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25434,6 +25439,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &659547564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25800,6 +25806,7 @@ GameObject:
   - component: {fileID: 670685162}
   - component: {fileID: 670685161}
   - component: {fileID: 670685160}
+  - component: {fileID: 670685163}
   m_Layer: 6
   m_Name: Disappearing Platform (1)
   m_TagString: Untagged
@@ -25834,7 +25841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe670779da9524449bd96b3e933f74ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.5
+  delay: 1
 --- !u!483693784 &670685161
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -25979,6 +25986,44 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &670685163
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670685158}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &705271232
 GameObject:
   m_ObjectHideFlags: 0
@@ -27077,6 +27122,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &818806476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27901,6 +27947,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &907817518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30437,6 +30484,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &1109730051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32842,6 +32890,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &1317202836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39372,6 +39421,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &1887271626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40477,6 +40527,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &2037664589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40972,6 +41023,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &2079574354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42023,6 +42075,7 @@ MonoBehaviour:
   shakeMagnitude: 0.2
   rotateWhileMoving: 0
   rotationSpeed: 180
+  startMoveSound: {fileID: 0}
 --- !u!114 &2137431286
 MonoBehaviour:
   m_ObjectHideFlags: 0
