@@ -28208,6 +28208,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 16929769}
     - target: {fileID: 3275630439001215432, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
+      propertyPath: jumpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a5d54f7e0babf104185ae9b796c94014, type: 3}
+    - target: {fileID: 3275630439001215432, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
+      propertyPath: sfxGroup
+      value: 
+      objectReference: {fileID: 2761416921434823386, guid: 008f7b9adbb47ed499160e96069d66a0, type: 2}
+    - target: {fileID: 3275630439001215432, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
+      propertyPath: walkClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fdc45259f6b5165459c61e62a9fa92d5, type: 3}
+    - target: {fileID: 3275630439001215432, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
       propertyPath: jumpForce
       value: 21
       objectReference: {fileID: 0}

@@ -41962,6 +41962,7 @@ MonoBehaviour:
   enableAnimations: 1
   jumpClip: {fileID: 8300000, guid: a5d54f7e0babf104185ae9b796c94014, type: 3}
   walkClip: {fileID: 8300000, guid: fdc45259f6b5165459c61e62a9fa92d5, type: 3}
+  sfxGroup: {fileID: 2761416921434823386, guid: 008f7b9adbb47ed499160e96069d66a0, type: 2}
   walkSoundDelay: 0.4
 --- !u!50 &3934687943949313144
 Rigidbody2D:
