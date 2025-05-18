@@ -50,8 +50,22 @@ public class Player : MonoBehaviour
     // Method called from UnityEvent when a trap triggers the player's death
     public void TriggerDeathWithClip(AudioClip clip)
     {
-        RespawnWithAudio(clip);  // Call RespawnWithAudio with the specific death clip
+        StartCoroutine(HandleDeath(clip));
     }
+
+    private IEnumerator HandleDeath(AudioClip clip)
+    {
+        RespawnWithAudio(clip);  // This plays sound + shows death UI
+
+        // Wait for respawn coroutine to finish inside RespawnWithAudio() before losing life
+        // (Assuming RespawnWithAudio waits for player input)
+
+        // We don't have a callback from RespawnWithAudio, so a simple wait here (replace with better event if possible)
+        yield return new WaitForSeconds(2f); // adjust timing based on your respawn coroutine length
+
+        LifeManager.Instance.LoseLife(clip);
+    }
+
 
     // Start the respawn process
     private IEnumerator RespawnPlayer()
