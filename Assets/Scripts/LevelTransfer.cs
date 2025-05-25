@@ -12,6 +12,8 @@ public class LevelTransfer : MonoBehaviour
 
     private bool hasTriggered = false;
 
+
+
     public void TriggerTransfer()
     {
         if (hasTriggered) return;

@@ -19152,6 +19152,18 @@ PrefabInstance:
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 6632835826346652489, guid: a2a78ab5f5d78a24799ef9f02f659748, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632835826346652489, guid: a2a78ab5f5d78a24799ef9f02f659748, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632835826346652489, guid: a2a78ab5f5d78a24799ef9f02f659748, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632835826346652489, guid: a2a78ab5f5d78a24799ef9f02f659748, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -19181,11 +19193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6632835826346652489, guid: a2a78ab5f5d78a24799ef9f02f659748, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 10
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6632835826346652489, guid: a2a78ab5f5d78a24799ef9f02f659748, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -10
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 6632835826346652489, guid: a2a78ab5f5d78a24799ef9f02f659748, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19198,6 +19210,10 @@ PrefabInstance:
     - target: {fileID: 6632835826346652489, guid: a2a78ab5f5d78a24799ef9f02f659748, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632835826346652489, guid: a2a78ab5f5d78a24799ef9f02f659748, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19914,9 +19930,9 @@ GameObject:
   - component: {fileID: 1866514893}
   - component: {fileID: 1866514892}
   - component: {fileID: 1866514891}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spikes
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33896,6 +33912,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: fdc45259f6b5165459c61e62a9fa92d5, type: 3}
     - target: {fileID: 3275630439001215432, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
+      propertyPath: musicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ed4201a44c99424e8fcbf9e4582e540, type: 3}
+    - target: {fileID: 3275630439001215432, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
       propertyPath: jumpButton
       value: 
       objectReference: {fileID: 1042689560}
@@ -33903,6 +33923,10 @@ PrefabInstance:
       propertyPath: leftButton
       value: 
       objectReference: {fileID: 225649937}
+    - target: {fileID: 3275630439001215432, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
+      propertyPath: musicGroup
+      value: 
+      objectReference: {fileID: -1182600112471768613, guid: 008f7b9adbb47ed499160e96069d66a0, type: 2}
     - target: {fileID: 3275630439001215432, guid: e546e522a994e2b4d8ff6dddf90947ab, type: 3}
       propertyPath: rightButton
       value: 
